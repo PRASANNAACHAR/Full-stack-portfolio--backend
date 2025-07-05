@@ -1,0 +1,16 @@
+video ended CodeWithZeeshu :4:10:29  
+
+
+backend:
+npm init
+npm install express-fileupload bcrypt cookie-parser nodemailer cors dotenv cloudinary jsonwebtoken mongoose
+npm install express
+
+
+npm run dev
+npm run start backend
+
+
+dashboard
+prasannaacharr@gmail.com
+123456789
