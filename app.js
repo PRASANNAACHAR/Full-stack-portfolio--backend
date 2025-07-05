@@ -19,7 +19,7 @@ dotenv.config({path: "./config/.env"});
 
 
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"], // Add the new frontend URL here
+    origin: ["https://full-stack-portfolio-dashboard.vercel.app", "https://full-stack-portfolio-frontend.vercel.app"], // Add the new frontend URL here
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
 }));
