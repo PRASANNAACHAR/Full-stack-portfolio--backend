@@ -14,3 +14,10 @@ npm run start backend
 dashboard
 prasannaacharr@gmail.com
 123456789
+
+
+frontend url:
+https://full-stack-portfolio-frontend.vercel.app/
+
+dashboar url:
+https://full-stack-portfolio-dashboard.vercel.app/
