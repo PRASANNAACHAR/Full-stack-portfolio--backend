@@ -18,11 +18,31 @@ const app = express()
 dotenv.config({path: "./config/.env"});
 
 
+const allowedOrigins = [
+  "https://full-stack-portfolio-dashboard.vercel.app",
+  "https://full-stack-portfolio-frontend.vercel.app"
+];
+
 app.use(cors({
-    origin: ["https://full-stack-portfolio-dashboard.vercel.app", "https://full-stack-portfolio-frontend.vercel.app"], // Add the new frontend URL here
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true,
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true,
 }));
+
+// Handle Preflight requests
+app.options("*", cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "DELETE", "PUT"],
+  credentials: true,
+}));
+
+
+
+// app.use(cors({
+//     origin: ["https://full-stack-portfolio-dashboard.vercel.app", "https://full-stack-portfolio-frontend.vercel.app"], // Add the new frontend URL here
+//     methods: ["GET", "POST", "DELETE", "PUT"],
+//     credentials: true,
+// }));
 
 
 // app.use(cors({
