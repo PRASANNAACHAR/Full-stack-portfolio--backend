@@ -179,14 +179,15 @@ export const updatePassword = catchAsyncErrors(async(req,res,next)=>{
     });
 });
 
-export const  getUserPortfolio = catchAsyncErrors(async(req,res,next)=>{
-    const id = "671cdac3d29e556ea854e4ed" ;
-    const user = await User.findById(id);
-    res.status(200).json({
-        success: true,
-        user,
-    });
-})
+export const getUserPortfolio = catchAsyncErrors(async (req, res, next) => {
+  const id = "671cdac3d29e556ea854e4ed";  // ✅ Your correct ID
+  const user = await User.findById(id);
+  res.status(200).json({
+    success: true,
+    user,
+  });
+});
+
 
 export const forgotPassword = catchAsyncErrors(async(req,res,next)=>{
     const  user = await User.findOne({email: req.body.email});
